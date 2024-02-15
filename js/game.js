@@ -204,14 +204,11 @@ document.addEventListener('keydown', function(event) {
 
 var xStart, yStart;
 
-// Função para detectar gestos de toque em dispositivos móveis
 document.addEventListener('touchstart', function(event) {
-    // Obtém as coordenadas do toque inicial
     xStart = event.touches[0].clientX;
     yStart = event.touches[0].clientY;
 });
 
-// Função para determinar a direção do toque com base nas coordenadas do toque inicial e final
 document.addEventListener('touchend', function(event) {
     // Obtém as coordenadas do toque final
     var xEnd = event.changedTouches[0].clientX;
@@ -241,33 +238,15 @@ document.addEventListener('touchend', function(event) {
     }
 });
 
-
-
-
-
-/*document.addEventListener('touchstart', function(event) {
-    var touchX = event.touches[0].clientX;
-    var touchY = event.touches[0].clientY;
-    var screenWidth = window.innerWidth;
-    var screenHeight = window.innerHeight;
-    var touchPositionX = touchX / screenWidth;
-    var touchPositionY = touchY / screenHeight;
-    if (touchPositionY < 0.5) {
-        if (touchPositionX < 0.5) {
-            move('left');
-        } else {
-            move('right');
-        }
-    }else {
-        if (touchPositionX < 0.5) {
-            move('up');
-        } else {
-            move('down');
-        }
+function toggleFullScreen() {
+    if (!document.fullscreenElement && 
+        !document.mozFullScreenElement &&
+        !document.webkitFullscreenElement &&
+        !document.msFullscreenElement) {
+         document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
     }
-});*/
-
-
-
+  }
 
 
