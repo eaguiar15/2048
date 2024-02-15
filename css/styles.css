@@ -4,6 +4,7 @@
  }
  
  body {
+     overflow-x: hidden;
      margin: 0;
      font-family:  'sans-serif','Tahoma';
      color:var(--primary);
@@ -16,7 +17,7 @@
        'main'
        'footer';
      grid-template-rows: auto auto auto; 
-     min-height: 100vh;
+     min-height: 90vh;
  }
 
  .main {
