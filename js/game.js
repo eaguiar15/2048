@@ -25,7 +25,7 @@ function random(){
     if(pos.length > 0){
         board[pos[index][0]][pos[index][1]] = blind;
     }
-    if(plays % 1000 == 0){
+    if(plays % 500 == 0){
         blind*=2;
     }
 
@@ -90,8 +90,8 @@ async function move(direction) {
                      }
                  }
              }
-             await sleep(25);
-             print();
+             //await sleep(25);
+             //print();
         }
         
     }
@@ -120,8 +120,8 @@ async function move(direction) {
                     }
                 }
             }
-            await sleep(25);
-            print();
+            //await sleep(25);
+            //print();
         }
     }
     if(direction == "up"){
@@ -149,8 +149,8 @@ async function move(direction) {
                     }
                 }
               }
-            await sleep(25);
-            print();
+            //await sleep(25);
+            //print();
         }
     }
     if(direction == "down"){  
@@ -178,11 +178,11 @@ async function move(direction) {
                      }
                  }
             }
-            await sleep(25);
-            print();
+            //await sleep(25);
         }
     }
-    await sleep(100);
+    print();
+    //await sleep(100);
     random();
     print();
 
