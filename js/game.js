@@ -25,7 +25,7 @@ function random(){
     if(pos.length > 0){
         board[pos[index][0]][pos[index][1]] = blind;
     }
-    if(plays % 15 == 0){
+    if(plays % 500 == 0){
         blind*=2;
         for(let l = 0 ; l < board.length; l++){
             for(let c = 0 ; c  < board[l].length ; c++){
